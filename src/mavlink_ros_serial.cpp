@@ -382,7 +382,7 @@ void* serial_wait(void* serial_ptr)
       rosmavlink_msg.compid = message.compid;
       rosmavlink_msg.msgid = message.msgid;
 
-      for (int i = 0; i < message.len / 8; i++)
+      for (int i = 0; i < std::ceil( message.len / 8. ); i++)
       {
         (rosmavlink_msg.payload64).push_back(message.payload64[i]);
       }
