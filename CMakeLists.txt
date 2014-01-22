@@ -59,3 +59,9 @@ target_link_libraries(mavlink_ros_serial
   ${GLIB2_LIBRARY}
   ${GTHREAD2_LIBRARY}
 )
+
+rosbuild_add_executable(mavlink_ros_udp src/mavlink_ros_udp.cpp)
+target_link_libraries(mavlink_ros_udp
+  ${GLIB2_LIBRARY}
+  ${GTHREAD2_LIBRARY}
+)
