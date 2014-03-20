@@ -54,7 +54,7 @@ INCLUDE_DIRECTORIES(
   ../include/
 )
 
-rosbuild_add_executable(mavlink_ros_serial src/mavlink_ros_serial.cpp)
+rosbuild_add_executable(mavlink_ros_serial src/mavlink_ros_serial.cpp src/mavlink_ros_conversion.cpp src/serial_helpers.cpp)
 target_link_libraries(mavlink_ros_serial
   ${GLIB2_LIBRARY}
   ${GTHREAD2_LIBRARY}
